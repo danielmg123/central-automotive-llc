@@ -1,0 +1,476 @@
+/* Custom Colors */
+:root {
+    --primary-color: #003366; /* Dark Blue */
+    --secondary-color: #f8f9fa; /* Light Grey */
+    --text-color: #333333; /* Default text color */
+    --accent-color: #007bff; /* Accent color */
+    --text-shadow-color: rgba(0, 0, 0, 0.7); /* Stronger text shadow for banner */
+}
+
+/* Global font settings */
+body {
+    font-family: 'Roboto', sans-serif; /* Use Roboto for the entire site */
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+}
+
+/* Heading and Text Styles */
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900; /* Roboto-Black for prominent headings */
+    color: var(--primary-color);
+    font-size: 4.5rem;
+    margin-bottom: 20px;
+}
+
+h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700; /* Roboto-Bold for other headings */
+    color: var(--primary-color);
+}
+
+h2 {
+    margin-bottom: 40px; /* Add more space between h2 and following content */
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400; /* Regular weight for paragraphs */
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* Navigation Links */
+.navbar-nav .nav-link {
+    font-weight: 500; /* Medium weight for nav links */
+    color: var(--primary-color);
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--accent-color); /* Hover effect */
+}
+
+/* Navigation Separators - Default (Hidden on Desktop) */
+.nav-separator {
+    display: none; /* Hidden by default */
+}
+
+/* Show the separator in the mobile dropdown */
+@media (max-width: 992px) {
+    .navbar-collapse {
+        display: block; /* Ensure the mobile dropdown works properly */
+    }
+
+    .nav-separator {
+        display: block;
+        width: 100%; /* Full width to act as a horizontal separator */
+        height: 1px;
+        background-color: var(--primary-color); /* Same dark blue */
+        margin: 5px 0; /* Add space above and below the separator */
+        opacity: 0.7; /* Slight transparency */
+        transition: opacity 0.3s ease;
+    }
+
+    .nav-separator:hover {
+        opacity: 1; /* Fully opaque when hovered */
+    }
+}
+
+@media (min-width: 993px) {
+    .nav-separator {
+        display: none; /* Hidden on larger screens */
+    }
+
+    .navbar {
+        height: 10vh; /* The navbar will take 10% of the viewport height */
+        padding: 0; /* Remove any extra padding */
+    }
+
+    .navbar-logo {
+        max-height: 80%; /* Adjust logo size relative to the navbar height */
+    }
+}
+
+/* Adjust the navigation bar height */
+.navbar {
+    padding: 1rem 1rem; /* Default padding for larger screens */
+}
+
+.navbar-logo {
+    max-height: 60px;
+    height: auto;
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* Mobile Adjustments for Navbar and Logo */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem 1rem; /* Reduce navbar padding for mobile */
+    }
+
+    .navbar-logo {
+        max-height: 40px; /* Reduce logo size on mobile */
+    }
+}
+
+/* Button Styling for "Contact Us" */
+.btn-primary {
+    background-color: transparent;
+    border: 2px solid #fff; /* White border for button */
+    font-weight: 700; /* Bold for primary buttons */
+    color: #fff;
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+    padding: 0.85rem 2.5rem; /* Increased padding for a longer button */
+    min-width: 250px; /* Set a minimum width to ensure the button is longer */
+}
+
+.btn-primary:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light translucent effect on hover */
+    border-color: #fff;
+    color: #fff;
+    transform: scale(1.1); /* Slight scaling effect on hover */
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.5); /* Glowing effect on hover */
+}
+
+/* Button Styling for "Book a Service", "Call Us", and "Email Us" */
+.btn-outline-black {
+    background-color: transparent;
+    border: 2px solid #333; /* Black border for other buttons */
+    font-weight: 700;
+    color: #333; /* Black text */
+    transition: all 0.3s ease-in-out;
+    padding: 0.75rem 2rem; /* Padding similar to the primary button */
+}
+
+.btn-outline-black:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Light translucent black on hover */
+    border-color: #333;
+    color: #333;
+    transform: scale(1.05); /* Slight scaling effect on hover */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+/* Home Section (Hero) Styling */
+.hero-section {
+    height: 90vh; /* Full viewport height */
+    background: url('assets/images/banner.jpg') center center/cover no-repeat;
+    position: relative;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 0; /* Remove padding from top */
+    transform: translateY(-80px); /* Shift content slightly up */
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 51, 0.8); /* Darker overlay for better contrast */
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Main Banner Heading Styling */
+.hero-section h1 {
+    font-weight: 900; /* Roboto-Black for hero heading */
+    font-size: 5rem; /* Increased font size */
+    margin-bottom: 15px;
+    text-shadow: 4px 4px 10px var(--text-shadow-color); /* Stronger shadow for more pop */
+    color: #fff; /* Ensure white color for contrast */
+}
+
+/* Main Banner Subtext Styling */
+.hero-section p {
+    font-size: 1.75rem; /* Increased font size */
+    font-weight: 400; /* Regular weight for subtext */
+    margin-bottom: 1.5rem;
+    text-shadow: 3px 3px 8px var(--text-shadow-color); /* Strong shadow for subtext */
+    color: #fff;
+}
+
+.hero-section .btn {
+    padding: 0.85rem 2.5rem; /* Increase padding for longer button */
+    font-size: 1.3rem;
+    margin-top: 10px; /* Slight margin adjustment */
+}
+
+/* Mobile-specific adjustments for the hero section */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 92vh; /* Ensure the height is exactly the viewport height */
+    }
+}
+
+/* Services Section Styling */
+.services-section {
+    background-color: var(--secondary-color);
+    padding: 60px 0;
+}
+
+.services-section h2 {
+    font-weight: 700; /* Roboto-Bold */
+    font-size: 2.5rem;
+    margin-bottom: 40px; /* Add extra spacing under h2 in this section */
+}
+
+.service-icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 15px;
+}
+
+.services-section h3 {
+    font-weight: 500; /* Roboto-Medium */
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+.services-section p {
+    font-weight: 400; /* Roboto-Regular */
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Mobile adjustments for services section */
+@media (max-width: 768px) {
+    .services-section .col-md-4 {
+        margin-bottom: 20px; /* Add spacing between services */
+    }
+}
+
+.services-section .btn {
+    padding: 10px 30px;
+    font-weight: 500; /* Roboto-Medium */
+    font-size: 1.2rem;
+}
+
+/* About Us Section Styling */
+.about-section {
+    background-color: #fff;
+    padding: 60px 0;
+    color: var(--text-color);
+}
+
+.about-section h2, .about-section h3 {
+    font-weight: 700; /* Roboto-Bold */
+}
+
+.about-section h2 {
+    margin-bottom: 40px; /* Add more space between h2 and content */
+}
+
+.about-section p {
+    font-weight: 400; /* Roboto-Regular */
+}
+
+/* Customer Reviews Section Styling */
+.reviews-section {
+    background-color: var(--secondary-color);
+    padding: 60px 0;
+}
+
+.reviews-section h2 {
+    font-weight: 700; /* Roboto-Bold */
+    font-size: 2.5rem;
+    margin-bottom: 40px; /* Add extra spacing under h2 in this section */
+}
+
+.reviews-section blockquote {
+    background-color: #fff;
+    border-left: 5px solid var(--primary-color);
+    padding: 20px;
+    border-radius: 5px;
+    font-style: italic;
+}
+
+.reviews-section p {
+    font-weight: 400; /* Roboto-Regular */
+    color: var(--text-color);
+}
+
+.reviews-section .blockquote-footer {
+    margin-top: 10px;
+    font-size: 0.875rem;
+    color: #666;
+}
+
+/* Carousel Styling */
+.carousel {
+    position: relative;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    filter: invert(100%);
+}
+
+.carousel-control-prev {
+    left: -50px; /* Position arrows outside of the text area */
+}
+
+.carousel-control-next {
+    right: -50px; /* Position arrows outside of the text area */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Mobile-specific arrow positioning */
+@media (max-width: 768px) {
+    .carousel-control-prev {
+        left: 10px; /* Keep arrows inside the viewport on mobile */
+        bottom: 20px; /* Move the arrow closer to the bottom */
+        top: auto; /* Remove the top positioning */
+    }
+
+    .carousel-control-next {
+        right: 10px; /* Keep arrows inside the viewport on mobile */
+        bottom: 20px; /* Move the arrow closer to the bottom */
+        top: auto; /* Remove the top positioning */
+    }
+
+    blockquote {
+        height: 450px; /* Larger review box height on mobile */
+        overflow-y: auto;
+    }
+}
+
+/* Ensure the carousel is only active on mobile */
+@media (max-width: 768px) {
+    .reviews-section .row {
+        display: none; /* Hide the normal row layout */
+    }
+
+    .carousel {
+        display: block; /* Show carousel on mobile */
+    }
+}
+
+@media (min-width: 769px) {
+    .carousel {
+        display: block; /* Show carousel on larger screens */
+    }
+    
+    .reviews-section .row {
+        display: flex; /* Show normal row layout on larger screens */
+    }
+}
+
+/* Contact Section Styling */
+.contact-section {
+    background-color: var(--secondary-color);
+    padding: 60px 0;
+}
+
+.contact-section h2 {
+    font-weight: 700; /* Roboto-Bold */
+    margin-bottom: 40px; /* Add more space between h2 and content */
+}
+
+.contact-section h3 {
+    font-weight: 500; /* Roboto-Medium */
+}
+
+.contact-section ul li {
+    font-weight: 400; /* Roboto-Regular */
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.contact-section .btn {
+    padding: 10px 30px;
+    font-weight: 500; /* Roboto-Medium */
+    margin-bottom: 15px; /* Add space between buttons */
+    display: block; /* Stack buttons vertically */
+    width: 100%; /* Ensure buttons take up full width in mobile view */
+    max-width: 250px; /* Limit max width on larger screens */
+}
+
+.contact-section .btn-container {
+    display: flex;
+    justify-content: flex-start; /* Align buttons to the left */
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: flex-start; /* Align buttons to the left */
+    gap: 15px; /* Add space between buttons */
+}
+
+/* Add space between "Contact Information" and "Our Location" on mobile */
+@media (max-width: 768px) {
+    .contact-section .row > div {
+        margin-bottom: 20px; /* Add margin to space out sections */
+    }
+}
+
+/* Footer */
+footer {
+    font-weight: 400; /* Roboto-Regular */
+}
+
+/* Mobile Adjustments for Logo and Navbar */
+@media (max-width: 768px) {
+    .navbar-brand {
+        margin-left: 0; /* Remove left margin on mobile */
+    }
+
+    .navbar {
+        padding: 0.5rem 1rem; /* Reduce navbar padding for mobile */
+    }
+
+    .navbar-logo {
+        max-height: 40px; /* Reduce logo size on mobile */
+    }
+
+    .hero-section h1 {
+        font-size: 3.75rem; /* Adjust font size for mobile */
+    }
+
+    .hero-section p {
+        font-size: 1.5rem; /* Adjust subtext size for mobile */
+    }
+
+    .btn-primary {
+        min-width: 200px; /* Reduce button width on mobile */
+    }
+
+    .btn-outline-black {
+        min-width: 200px;
+    }
+
+    .contact-section .btn-container {
+        align-items: center; /* Center buttons on mobile */
+    }
+}
+
+/* Fade-in from left animation */
+.fade-in {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
