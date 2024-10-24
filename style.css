@@ -162,7 +162,7 @@ p {
     align-items: center;
     text-align: center;
     padding-top: 0; /* Remove padding from top */
-    transform: translateY(-80px); /* Shift content slightly up */
+    padding-bottom: 120px; /* Add padding at the bottom */
 }
 
 .hero-section::before {

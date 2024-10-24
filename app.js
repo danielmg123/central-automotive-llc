@@ -43,3 +43,31 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(section);
     });
 });
+
+// Adjust the carousel interval speed (in milliseconds) for the reviews section
+var reviewsCarousel = document.querySelector('#reviewsCarousel');
+if (reviewsCarousel) {
+    var carousel = new bootstrap.Carousel(reviewsCarousel, {
+        interval: 10000, // 10000 milliseconds = 10 seconds
+        pause: 'hover',  // Optional: pauses the carousel when the user hovers over it
+    });
+}
+
+// Close the banner when the close button is clicked
+document.getElementById('closeBanner').addEventListener('click', function () {
+    document.getElementById('spanish-banner').style.display = 'none';
+});
+
+// Scroll to contact section when the "Contáctenos" button is clicked
+document.getElementById('contactButton').addEventListener('click', function () {
+    document.getElementById('spanish-banner').style.display = 'none'; // Optionally hide the banner
+    const contactSection = document.getElementById('contact');
+    const offset = document.querySelector('.navbar').offsetHeight;
+    const elementPosition = contactSection.getBoundingClientRect().top;
+    const offsetPosition = elementPosition - offset;
+
+    window.scrollBy({
+        top: offsetPosition,
+        behavior: 'smooth'
+    });
+});

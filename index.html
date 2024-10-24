@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Transmission Shop</title>
+  <title>Central Automotive LLC</title>
 
   <!-- Bootstrap CSS (CDN) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -32,25 +32,27 @@
           <li class="nav-item">
             <a class="nav-link" href="#home">Home</a>
           </li>
-          <span class="nav-separator"></span>
           <li class="nav-item">
             <a class="nav-link" href="#services">Services</a>
           </li>
-          <span class="nav-separator"></span>
           <li class="nav-item">
             <a class="nav-link" href="#about">About Us</a>
           </li>
-          <span class="nav-separator"></span>
           <li class="nav-item">
             <a class="nav-link" href="#contact">Contact</a>
           </li>
-          <!-- Separator with inline style to remove margin -->
-          <span class="nav-separator" style="margin-bottom: 0;"></span>
         </ul>
       </div>
     </div>
   </nav>
-  
+
+<!-- Closable Spanish Popup Banner -->
+<div id="spanish-banner" class="alert alert-warning alert-dismissible fade show text-center p-2 m-0" style="font-size: 0.9rem;" role="alert">
+  <strong>¡Hablamos Español!</strong> 
+  <button id="contactButton" class="btn btn-outline-black btn-sm ms-2 py-1 px-3" style="font-size: 0.8rem;">Contáctenos</button>
+  <button type="button" class="btn-close" id="closeBanner" aria-label="Close"></button>
+</div>
+
 <!-- Home Section -->
 <section id="home" class="hero-section d-flex align-items-center justify-content-center text-center fade-in">
     <div class="container">
@@ -146,13 +148,6 @@
           <div class="carousel-item active">
             <blockquote class="blockquote text-center">
               <p>⭐⭐⭐⭐⭐</p>
-              <p>"I've been going to Central Automotive for years, and they always provide top-notch service. The team is professional, honest, and incredibly knowledgeable. Whether it's routine maintenance or complex repairs, they get the job done right the first time, with fair pricing and clear communication."</p>
-              <footer class="blockquote-footer">Daniel Garcia</footer>
-            </blockquote>
-          </div>
-          <div class="carousel-item">
-            <blockquote class="blockquote text-center">
-              <p>⭐⭐⭐⭐⭐</p>
               <p>"My go-to shop! Every time I've brought my car in, they’re reliable and super friendly. They take the time to explain everything and never try to push unnecessary repairs."</p>
               <footer class="blockquote-footer">Gabriella Soto</footer>
             </blockquote>
@@ -162,6 +157,13 @@
               <p>⭐⭐⭐⭐⭐</p>
               <p>"I was referred to this shop by family and friends for a new fuel pump, front/rear brakes, and an oil change. Honest people who do quality work for a reasonable price. Highly recommend!"</p>
               <footer class="blockquote-footer">Steven Bartosz</footer>
+            </blockquote>
+          </div>
+          <div class="carousel-item">
+            <blockquote class="blockquote text-center">
+              <p>⭐⭐⭐⭐⭐</p>
+              <p>"I've been going to Central Automotive for years, and they always provide top-notch service. The team is professional, honest, and incredibly knowledgeable. Whether it's routine maintenance or complex repairs, they get the job done right the first time, with fair pricing and clear communication."</p>
+              <footer class="blockquote-footer">Daniel Garcia</footer>
             </blockquote>
           </div>
         </div>
@@ -197,6 +199,11 @@
           <div class="btn-container">
             <a href="tel:+15555555555" class="btn btn-outline-black">Call Us</a>
             <a href="mailto:info@transmissionshop.com" class="btn btn-outline-black">Email Us</a>
+          </div>
+          
+          <!-- Hablamos Español -->
+          <div class="mt-3">
+            <p><strong>Hablamos Español</strong></p>
           </div>
         </div>
   
