@@ -162,7 +162,7 @@ p {
     align-items: center;
     text-align: center;
     padding-top: 0; /* Remove padding from top */
-    padding-bottom: 120px; /* Add padding at the bottom */
+    padding-bottom: 140px; /* Add padding at the bottom */
 }
 
 .hero-section::before {
@@ -473,4 +473,13 @@ footer {
 .fade-in.visible {
     opacity: 1;
     transform: translateX(0);
+}
+
+/* Adjust the layout of the Spanish banner on mobile */
+@media (max-width: 768px) {
+    #spanish-banner {
+        display: flex;
+        flex-direction: column; /* Stack the elements vertically */
+        align-items: center; /* Center the text and button */
+    }
 }
